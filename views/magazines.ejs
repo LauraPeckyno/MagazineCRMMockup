@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Inventory</title>
+        <meta name="description" content>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/public/style.css">
+        <link rel="stylesheet" href="/style.css">
     </head>
     <body>
         <div class="head">
@@ -23,11 +22,20 @@
                         width="350px" height="200px" /></div>
             </div><div class="headerImage"></div>
         </div>
-        <h1>Reinvented Magazine</h1>
-        <p>This is a sample mockup for the backend of a magazine subscription CRM.</p>
-        <p>Clearly, this would not be for external use, as it would expose subscriber info to folks outside of the organization.</p>
-        <p>However, it is an example of the database functionality gained through the use of MongoDB, Mongoose, Node.JS, and Express. Currently, I haven't implemented forms for data collection and searches. These can be performed via Postman and the browser.</p>
-        <p>Future work for this project includes: devise secure login system for the users, develop forms for the data collection, revise validation rules.</p>
-        <script src="" async defer></script>
+
+        <h1>Inventory</h1>
+        <div class="outerContainer">
+<ul>
+  <% inventory.forEach(function(item) { %>
+    <li>
+        <%= item.issueNum %><br>
+      <%= item.issueName %><br>
+      <%= item.pubDate.toLocaleDateString() %><br>
+      <%= item.inventoryNum %><br>
+    </li>
+  <% }); %>
+</ul>
+        
+        <script src async defer></script>
     </body>
 </html>

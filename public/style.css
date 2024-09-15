@@ -1,0 +1,108 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(222, 184, 135, 0.356);
+    color: black;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-weight: bold;
+    background-color: darkcyan;
+    margin-right: 20px;
+    padding: 5px 10px 5px 10px;
+}
+
+p {
+    margin: 10px;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.menuPush {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    align-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: darkcyan;
+    color: rgb(255, 255, 255);
+    border: solid rgb(255, 255, 255);
+    border-width: 1px;
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: rgb(104, 245, 245);
+    color: #000000;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+a:hover {
+    color: black;
+}
+
+.outerContainer {
+    background-color: white;
+
+}
+
+.headerImage {
+    background-image: url("https://static.wixstatic.com/media/0d9039_0366907b70a042579ce81a6d8acde975~mv2.png/v1/fill/w_948,h_779,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/0d9039_0366907b70a042579ce81a6d8acde975~mv2.png");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+    text-align: end;
+    padding: 10px;
+}
+
+.centeredText {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.formBox {
+    background-color: rgba(222, 184, 135, 0.356);
+    color: black;
+    border: solid black;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.centerBox {
+    display: flex;
+    justify-content: center;
+}

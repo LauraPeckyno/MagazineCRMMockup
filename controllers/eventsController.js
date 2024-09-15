@@ -8,14 +8,16 @@ const createEvent = async (req, res) => {
     location: location,
     eventName: eventName,
   })
-  res.json({ event: event })
+  // res.json({ event: event })
+  res.render('events', { event: event });
 };
 
 // read events
 const readEvent = async (req, res) => {
   const events = await Event.find();
   console.log('fetch all events');
-  res.json({ events: events })
+  // res.json({ events: events });
+  res.render('events', { events: events });
 };
 
 // read event by ID
@@ -23,7 +25,8 @@ const readEventById = async (req, res) => {
   const eventID = req.params.id //find by ID
   const thisEvent = await Event.findById(eventID);
   console.log('fetch event by id');
-  res.json({ event: thisEvent })
+  // res.json({ event: thisEvent });
+  res.render('events', { event: thisEvent });
 };
 
 // update event
@@ -37,7 +40,8 @@ const updateEvent = async (req, res) => {
   })
   const updatedEvent = await Event.findById(eventId)
   console.log('update Event');
-  res.json({ event: updatedEvent})
+  res.json({ event: updatedEvent});
+  res.render('events', { event: updatedEvent });
 };
 
 // delete Event

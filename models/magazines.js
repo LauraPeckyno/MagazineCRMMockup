@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const inventorySchema = new mongoose.Schema({
+const magazineSchema = new mongoose.Schema({
     issueNum: {
         type: Number,
         required: true,
@@ -25,6 +25,6 @@ const inventorySchema = new mongoose.Schema({
       }
     })
 
-const Inventory = mongoose.model("inventory", inventorySchema)
+const Magazine = mongoose.model("magazine", magazineSchema)
 
-module.exports = Inventory
+module.exports = Magazine

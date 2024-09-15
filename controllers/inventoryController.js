@@ -9,14 +9,19 @@ const createInventory = async (req, res) => {
     pubDate: pubDate,
     inventoryNum: inventoryNum
   })
-  res.json({ inventory: inventory })
+  res.json({inventory: inventory})
 };
 
 // read inventory
 const readInventory = async (req, res) => {
-  const inventory = await Inventory.find();
-  console.log('fetch all inventory');
-  res.json({ inventory: inventory })
+  try {
+    const inventory = await Inventory.find().limit(1); // Limit to 1 for a quick check
+    console.log('First item in inventory:', inventory);
+    res.json({ inventory: inventory });
+  } catch (error) {
+    console.error('Error fetching inventory:', error);
+    res.status(500).json({ error: 'Failed to fetch inventory' });
+  }
 };
 
 // read inventory by ID
@@ -24,7 +29,7 @@ const readInventoryById = async (req, res) => {
   const inventoryID = req.params.id //find by ID
   const thisInventory = await Inventory.findById(inventoryID);
   console.log('fetch inventory by id');
-  res.json({ inventory: thisInventory })
+  res.json({inventory: thisInventory})
 };
 
 // update inventory
@@ -52,4 +57,3 @@ const deleteInventory = async (req, res) => {
 };
 
 module.exports = { createInventory, readInventory, updateInventory, deleteInventory, readInventoryById }
-
